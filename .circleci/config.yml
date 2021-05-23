@@ -1,0 +1,10 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/node:16.2.0
+    steps:
+      - checkout
+      - run: yarn install
+      - run: ls -la
+      - run: yarn test
